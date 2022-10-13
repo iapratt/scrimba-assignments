@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lato:wght@100&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lato:wght@100&family=Smythe&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&family=Lato:wght@100&family=Smythe&family=Source+Sans+Pro:wght@200&family=Tapestry&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-box">
+    <header>
+      <div class="header-text">
+        <h1>Jimmy's Diner</h1>
+        <p class="subheader">The best burgers and pizzas in town.</p>
+      </div>
+    </header>
+    <section>
+      <div>
+        <div id="food-items">
+
+        </div>
+        <div class="order-total" id="order-total">
+
+        </div>
+        <div class="pop-up" id="modal">
+          <h3>Enter card details</h3>
+          <form id="modal-form">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="number" name="card-number" placeholder="Enter card number">
+            <input type="number" name="cvv" placeholder="Enter CVV">
+          </form>
+          <button id="pay-btn">Pay</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="index.js"></script>
+
+</body>
+
+
+</html>
