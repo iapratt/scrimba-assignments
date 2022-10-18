@@ -10,7 +10,7 @@ jobs:
         with:
           publish-dir: './tindog'
           production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.TOKEN_GITHUB }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: false
           enable-commit-comment: true
