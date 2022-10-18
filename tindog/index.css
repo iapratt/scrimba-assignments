@@ -1,0 +1,127 @@
+body {
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #F8F8F8;
+}
+
+.app {
+    width: 650px;
+    margin: auto;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grey-icons {
+    max-width: 40px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    padding: 20px 30px;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 50px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+.tindogs {
+    width: 640px;
+    margin: auto;
+    height: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: white;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.btn {
+    border-radius: 50%;
+    padding: 20px;
+    margin: 15px;
+    filter: drop-shadow(0 0 0.75rem #d9d9d9);
+    width: 95px;
+    height: 95px;
+}
+
+.text {
+    position: relative;
+}
+
+.nameAge {
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    font-size: 36px;
+}
+
+.bio {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 29px;
+    font-weight: 400;
+    color: #B7B7B7;
+    padding: 5px;
+}
+
+.endcard {
+    margin: auto;
+    color: #E82D70;
+    border: 3px solid #E82D70;
+    border-radius: 15px;
+    height: 800px;
+    width: 600px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.badge-div {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    bottom: 700px;
+    left: 40px;
+    transform: rotate(-20deg);
+    height: 150px;
+    width: 300px;
+}
+
+#nope:hover {
+    background-color: #FFE7EF;
+}
+
+#like:hover {
+    background-color: #DBFFF4;
+}
