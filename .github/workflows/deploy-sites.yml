@@ -1,0 +1,21 @@
+name: Build and Deploy to Netlify
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy tindog to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './tindog'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.TINDOG_ID }}
+        timeout-minutes: 1
