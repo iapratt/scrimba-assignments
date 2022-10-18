@@ -7,6 +7,7 @@ const card = document.getElementById("card")
 
 let currentDogIndex = 0
 let currentDog = new Dog(dogs[currentDogIndex])
+let areAvailableDogs = true
 
 function render() {
     card.innerHTML = currentDog.getDogHtml()
@@ -18,7 +19,9 @@ function getNewDog() {
             nope.style.backgroundColor = 'white'
             like.style.backgroundColor = 'white'
             card.innerHTML = `<h3 class="endcard">There are no more dogs in your area</h3>`
-        }, 1000)
+            areAvailableDogs = false
+        }, 500)
+
     } else {
         setTimeout(() => {
             currentDogIndex++
@@ -26,8 +29,10 @@ function getNewDog() {
             render()
             nope.style.backgroundColor = 'white'
             like.style.backgroundColor = 'white'
-        }, 1000)
+        }, 500)
     }
+
+
 
 }
 
@@ -42,10 +47,13 @@ function no() {
 }
 
 function likeBadge() {
+
     card.innerHTML += `
-    <div class="badge-div">
-    <img class="badge" src="./images/badge-like.png">
-    </div>`
+        <div class="badge-div">
+        <img class="badge" src="./images/badge-like.png">
+        </div>`
+
+
 }
 
 function nopeBadge() {
@@ -60,11 +68,19 @@ render()
 like.addEventListener('click', yes)
 nope.addEventListener('click', no)
 
+
 nope.addEventListener('click', function onClick(event) {
-    nope.style.backgroundColor = '#FFE7EF'
-    nopeBadge()
+    if (areAvailableDogs) {
+        nope.style.backgroundColor = '#FFE7EF'
+        nopeBadge()
+    }
+
 })
 like.addEventListener('click', function onClick(event) {
-    like.style.backgroundColor = '#DBFFF4'
-    likeBadge()
+    if (areAvailableDogs) {
+        like.style.backgroundColor = '#DBFFF4'
+        likeBadge()
+    }
 })
+
+
